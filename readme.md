@@ -61,7 +61,7 @@ git merge 合并分支
 
 
 ## script 0 : clone this project repository
-- 1. clone repository
+- 1: clone repository
 
 ```
 git clone https://github.com/xiangtao123/git-workflow-demo.git
@@ -69,7 +69,7 @@ git clone https://github.com/xiangtao123/git-workflow-demo.git
 
 
 ## script 1 : master init project repository
-- 1. add README.md file
+- 1: add README.md file
 
 ```
 cd /工作空间目录/lab-workspace-prod # 进入工作空间目录
@@ -77,20 +77,20 @@ mkdir git-workflow-demo # 创建项目目录
 vim README.md # 创建README.md文件
 ```
 
-- 2. init project repository at local
+- 2: init project repository at local
 
 ```
 git init # 将当前目录初始化为git repository
 ```
 
-- 3. add new file to stage
+- 3: add new file to stage
 
 ```
 git add README.md # 将README.md 文件添加到暂存区stage
 git status # 查看已修改的文件
 ```
 
-- 4. commit new file
+- 4: commit new file
 
 ```
 # 配置当前项目的git用户
@@ -102,7 +102,7 @@ git log # 查看文件更新提交记录
 
 ```
 
-- 5. push to remote repository
+- 5: push to remote repository
 
 ```
 git remote add origin https://github.com/用户名/git-workflow-demo.git # 本地仓库与远程仓库关联
@@ -112,13 +112,13 @@ git push origin master # 将本地仓库的修改推送到远程仓库
 
 
 ## script 2 : new branch
-- 1. add develop branch
+- 1: add develop branch
 
 ```
 git checkout -b develop # 创建并选中分支develop
 git push --set-upstream origin master# 推送到远程仓库
 ```
-- 2. add feature/feature-1.0 branch
+- 2: add feature/feature-1.0 branch
 
 ```
 git branch -a # 查看所有分支
@@ -130,7 +130,7 @@ git push --set-upstream origin master # 推送到远程仓库
 
 ## script 3 : develop new feature at feature/feature-1.0 branch
 
-- 1. add website/index.html file
+- 1: add website/index.html file
 
 ```
 mkdir website # 创建目录
@@ -144,7 +144,7 @@ git push --set-upstream origin feature/feature-1.0 # 将分支文件修改推送
 ```
 
 
-- 2. add branch release/release-1.0
+- 2: add branch release/release-1.0
 
 ```
 git branch -a # 查看所有的分支
@@ -154,7 +154,7 @@ git push --set-upstream origin release/release-1.0 # 将分支推送到远程仓
 
 ```
 
-- 3. merge feature/feature-1.0 into release/release-1.0
+- 3: merge feature/feature-1.0 into release/release-1.0
 
 ```
 git branch -a # 查看所有分支
@@ -165,7 +165,7 @@ git merge --no-ff feature/feature-1.0 # 将feature/feature-1.0分支合并到当
 
 ## script 4 : resolve conflicts
 
-- 1. add and update member info
+- 1: add and update member info
 
 ```
 git pull # 拉取远程仓库的修改，快进式。git fetch & git merge
@@ -179,7 +179,7 @@ git push --set-upstream origin release/release-1.0 # 推送至远程仓库
 
 ```
 
-- 2. 冲突信息：
+- 2: 冲突信息：
 ```
 git pull --no-ff
 remote: Counting objects: 11, done.
@@ -193,7 +193,7 @@ CONFLICT (content): Merge conflict in website/index.html
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-- 3. 产生冲突的文件内容：
+- 3: 产生冲突的文件内容：
 
 ```
 <html>
@@ -221,7 +221,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 
 
-- 2. pull update & resolve conficts
+- 2: pull update & resolve conficts
 
 ```
 git checout release/release-1.0 # 切换分支
@@ -238,7 +238,7 @@ git push --set-upstream origin release/release-1.0 # 将本地仓库更新推送
 
 
 ## script 5 : merge release branch into develop, master
-- 1. merge release branch into develop
+- 1: merge release branch into develop
 
 ```
 git checkout develop # 切换开发分支
@@ -246,7 +246,7 @@ git merge --no-ff release/release-1.0 # 将release/release-1.0分支合并到当
 git push --set-upstream origin release/release-1.0 # 将本地仓库的更新推送至远程仓库
 ```
 
-- 2. add hotfix branch, for fix bug
+- 2: add hotfix branch, for fix bug
 
 ```
 git checkout master # 切换分支
@@ -255,7 +255,7 @@ git push --set-upstream origin hotfix/hotfix-0.1 # 将本地仓库的更新推�
 
 ```
 
-- 3. merge hotfix branch into master
+- 3: merge hotfix branch into master
 
 ```
 git checkout master # 切换分支
@@ -265,7 +265,7 @@ git push --set-upstream origin develop # 将本地仓库的更新推送至远程
 
 
 
-- 4. merge release branch into master
+- 4: merge release branch into master
 
 ```
 git checkout master # 切换分支
@@ -273,7 +273,7 @@ git merge --no-ff release/release-1.0 # 将release/release-1.0分支合并至当
 git push --set-upstream origin release/relase-1.0 # 将本地仓库的更新推送至远程仓库
 ```
 
-- 5. merge master branch into develop
+- 5: merge master branch into develop
 
 ```
 git checkout develop #切换分支
