@@ -6,9 +6,9 @@
 ![Git命令图解](images/git-cmd.png)
 
 ## Git 命令解释
-- 1. git clone $url :
+- 1: git clone $url :
 克隆远程仓库到本地
-- 2. git checkout -b $branchName
+- 2: git checkout -b $branchName
 创建并选中分支$branchName
 等价于：
 ```
@@ -16,13 +16,13 @@ git branch $branchName # 创建分支
 git checkout $branchName # 切换分支
 ```
 
-- 3. git add $filePath
+- 3: git add $filePath
 将文件添加至暂存区
-- 4. git commit -a -m ‘update msg’
+- 4: git commit -a -m ‘update msg’
 将暂存区的文件提交至本地仓库
-- 5. git push --set-upstream origin $branchName
+- 5: git push --set-upstream origin $branchName
 将本地仓库的更新推送至远程仓库
-- 6. git pull --no-ff
+- 6: git pull --no-ff
 拉取远程仓库的更新，并合并至本地仓库。
 
 ```
@@ -31,13 +31,13 @@ git fetch 拉取远程仓库的更新
 git merge 合并分支
 ```
 
-- 7. git merge --no-ff $branchName
+- 7: git merge --no-ff $branchName
 将$branchName分支合并到当前分支，非快进式。
-- 8. git status
+- 8: git status
 查看文件修改情况
-- 9. git log
+- 9: git log
 查看提交记录
-- 10. git branch -a
+- 10: git branch -a
 查看所有分支信息
 
 
